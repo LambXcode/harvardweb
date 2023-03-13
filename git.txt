@@ -8,3 +8,23 @@ push to github online
 
 git status 
 git push to make the commits to github
+
+push changes from my computer to github
+pull changes that existed version in github
+
+
+git commit -am "..."
+
+
+Merge Conflicts - trying to make changes when others are also, we have to figure out how to handle them.
+Style:
+
+<<<<
+Other changes
+===
+My changes 
+>> pull >>> 2918731984719847198 -- hash of commit 
+
+Resolution:
+
+remove metadata from file, remote version or combine changes...
