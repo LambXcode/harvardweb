@@ -1,0 +1,10 @@
+git clone <url>
+git add "...html"
+git commit -m "..."
+
+local changes above
+
+push to github online
+
+git status 
+git push to make the commits to github
