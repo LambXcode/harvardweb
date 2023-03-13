@@ -5,19 +5,33 @@
         <meta charset="UTF-8" />
         <title>Hello!</title> <!-- Head of the page/title-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-        <style>
-            h1 {
-                color: blue;
-            }
-        </style>
     </head>
     <body> <!-- Body of the page -->
-        <h1>
+        <h1 style="color: red;">
             Hello Github!
         </h1>
-        <div class="alert alert-success" role="alert">
-            Successfully pushed!!!
-            Try Pull Me Now!!
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">Successfully pushed! Try Pull Me Now!</button>
+        <script>
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+            }
+            const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert('Nice, you triggered this alert message!', 'success')
+            })
+            }
+        </script>
         </div>
     </body>
 </html> <!-- End of the tag -->
