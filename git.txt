@@ -54,4 +54,5 @@ tells us what branch we are on.
 
 git checkout -b "style"
 
+git merge -b "style"
 
