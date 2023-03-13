@@ -17,8 +17,8 @@ git commit -am "..."
 
 
 Merge Conflicts - trying to make changes when others are also, we have to figure out how to handle them.
-Style:
 
+Style:
 <<<<
 Other changes
 ===
@@ -28,3 +28,30 @@ My changes
 Resolution:
 
 remove metadata from file, remote version or combine changes...
+
+git logs:
+-commit logs
+
+git reset: 
+-git reset --hard <commit>
+-git reset --hard origin/master
+
+Branching:
+
+gits way of working on the repository at the same time. Eliminates linear flows. 
+
+master should contain stable and up to date versions of the code. 
+
+newer aditional features should have an additional "feature" branch
+
+we switch where our head points to for traversal purposes. 
+
+when we happy we can merge the branches onto the master branch. 
+
+git branch:
+
+tells us what branch we are on. 
+
+git checkout -b "style"
+
+
